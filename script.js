@@ -60,7 +60,7 @@ const pads = [
 const play = (pad_index) => {
     pads[pad_index].load();
     pads[pad_index].play();
-});
+};
 
 // Events
 elm_pads.forEach(pad => {

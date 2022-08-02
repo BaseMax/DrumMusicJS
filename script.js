@@ -28,6 +28,19 @@ const elm_pads = [
     elm_pad_twelve
 ];
 
+const pad_one = new Audio('audio/1.mp3');
+const pad_two = new Audio('audio/2.mp3');
+const pad_three = new Audio('audio/3.mp3');
+const pad_four = new Audio('audio/4.mp3');
+const pad_five = new Audio('audio/5.mp3');
+const pad_six = new Audio('audio/6.mp3');
+const pad_seven = new Audio('audio/7.mp3');
+const pad_eight = new Audio('audio/8.mp3');
+const pad_nine = new Audio('audio/9.mp3');
+const pad_ten = new Audio('audio/10.mp3');
+const pad_eleven = new Audio('audio/11.mp3');
+const pad_twelve = new Audio('audio/12.mp3');
+
 const pads = [
     pad_one,
     pad_two,
@@ -54,4 +67,55 @@ elm_pads.forEach(pad => {
     pad.addEventListener('click', () => {
         play(pad.dataset.pad);
     });
+});
+
+document.addEventListener('keydown', (e) => {
+    const code = e.keyCode;
+    const kc = String.fromCharCode(e.keyCode);
+
+    document.querySelector(`div[data-code='${code}']`).classList.add("active");
+
+    switch(kc) {
+        case "R":
+            play(0);
+            break;
+        case "T":
+            play(1);
+            break;
+        case "Y":
+            play(2);
+            break;
+        case "U":
+            play(3);
+            break;
+        case "F":
+            play(4);
+            break;
+        case "G":
+            play(5);
+            break;
+        case "H":
+            play(6);
+            break;
+        case "J":
+            play(7);
+            break;
+        case "V":
+            play(8);
+            break;
+        case "B":
+            play(9);
+            break;
+        case "N":
+            play(10);
+            break;
+        case "M":
+            play(11);
+            break;
+    }
+});
+
+document.addEventListener('keyup', (e) => {
+    var code = e.keyCode;
+    document.querySelector("div[data-code='"+code+"']").classList.remove("active");
 });

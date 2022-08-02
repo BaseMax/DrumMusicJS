@@ -58,7 +58,8 @@ const pads = [
 
 // Function
 const play = (pad_index) => {
-    console.log(pad_index, pads);
+    if (!pads[pad_index]) return;
+
     pads[pad_index].load();
     pads[pad_index].play();
 };

@@ -67,7 +67,7 @@ const play = (pad_index) => {
 // Events
 elm_pads.forEach(pad => {
     pad.addEventListener('click', () => {
-        play(pad.dataset.pad);
+        play(pad.dataset.pad - 1);
     });
 });
 

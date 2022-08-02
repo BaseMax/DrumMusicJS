@@ -9,7 +9,7 @@ html, body {
     flex-direction: column;
     justify-content: center;
     font-family: "Oswald", sans-serif;
-    background: linear-gradient(to left, #fd746c, #ff9068);
+    background: linear-gradient(to left, #3ab0ba, #68ff7d);
 }
 h1 {
     color: #fff;
@@ -37,6 +37,7 @@ h1 {
   -webkit-user-select: none;
   color: rgba(255, 255, 255, 0.4);
   box-shadow: 0 8px 6px -6px black;
+  border: 2px solid #2ecc71;
 }
 .box:hover {
     cursor: pointer;
@@ -51,13 +52,4 @@ h1 {
     transition: all 0.2s;
     transform: scale(1.1);
     background-color: #2b2b2b;
-}
-.pad-1, .pad-2, .pad-3, .pad-4 {
-    border: 2px solid #2ecc71;
-}
-.pad-5, .pad-6, .pad-7, .pad-8 {
-    border: 2px solid #E5446D;
-}
-.pad-9, .pad-10, .pad-11, .pad-12 {
-    border: 2px solid #1abc9c;
 }

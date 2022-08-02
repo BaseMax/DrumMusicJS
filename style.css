@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 
 html, body {
+    min-height: 90vh;
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     overflow: hidden;
     align-items: center;
@@ -21,11 +22,6 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-@media screen and (max-width: 600px) {
-    .pad {
-        width: 88%;
-    }
 }
 .box {
   width: 100px;
@@ -53,8 +49,13 @@ h1 {
     transform: scale(1.1);
     background-color: #2b2b2b;
 }
-.active {
+.box.active {
     transition: all 0.2s;
     transform: scale(1.1);
     background-color: #2b2b2b;
+}
+@media screen and (max-width: 600px) {
+    .pad {
+        width: 88%;
+    }
 }

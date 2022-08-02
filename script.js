@@ -79,44 +79,12 @@ document.addEventListener('keydown', (e) => {
 
     box.classList.add("active");
 
-    switch(kc) {
-        case "R":
-            play(1);
-            break;
-        case "T":
-            play(2);
-            break;
-        case "Y":
-            play(3);
-            break;
-        case "U":
-            play(4);
-            break;
-        case "F":
-            play(5);
-            break;
-        case "G":
-            play(6);
-            break;
-        case "H":
-            play(7);
-            break;
-        case "J":
-            play(8);
-            break;
-        case "V":
-            play(9);
-            break;
-        case "B":
-            play(10);
-            break;
-        case "N":
-            play(11);
-            break;
-        case "M":
-            play(12);
-            break;
-    }
+    const allowed_keys = [
+        "R", "T", "Y", "U",
+        "F", "G", "H", "J",
+        "V", "B", "N", "M"
+    ];
+    if (allowed_keys.includes(kc)) play(allowed_keys.indexOf(kc) + 1);
 });
 
 document.addEventListener('keyup', (e) => {

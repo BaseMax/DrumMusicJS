@@ -58,7 +58,6 @@ const pads = [
 
 // Function
 const play = (pad_index) => {
-    console.log(pad_index);
     pads[pad_index].load();
     pads[pad_index].play();
 };
@@ -74,8 +73,8 @@ document.addEventListener('keydown', (e) => {
     const kc = String.fromCharCode(e.keyCode);
 
     const box = document.querySelector(`div[data-key='${kc}']`);
-    console.log(kc, `div[data-key='${kc}']`, box);
     if (!box) return;
+
     box.classList.add("active");
 
     switch(kc) {
@@ -121,8 +120,7 @@ document.addEventListener('keydown', (e) => {
 document.addEventListener('keyup', (e) => {
     const kc = String.fromCharCode(e.keyCode);
     const box = document.querySelector(`div[data-key='${kc}']`);
-    console.log(kc, `div[data-key='${kc}']`, box);
-
     if (!box) return;
+
     box.classList.remove("active");
 });

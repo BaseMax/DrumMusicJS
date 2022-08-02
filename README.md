@@ -6,3 +6,5 @@ A web-based **Drum Music** game for playing the drum. This can give you an exper
 
 [![Drum Music JS](preview.jpg)](https://basemax.github.io/DrumMusicJS/)
 
+Source: I just followed the main idea and copied the song files. So the song copyright is not for me. (`https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/*`)
+

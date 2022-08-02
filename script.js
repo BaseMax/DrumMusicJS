@@ -58,16 +58,16 @@ const pads = [
 
 // Function
 const play = (pad_index) => {
-    if (!pads[pad_index]) return;
+    if (!pads[pad_index - 1]) return;
 
-    pads[pad_index].load();
-    pads[pad_index].play();
+    pads[pad_index - 1].load();
+    pads[pad_index - 1].play();
 };
 
 // Events
 elm_pads.forEach(pad => {
     pad.addEventListener('click', () => {
-        play(pad.dataset.pad - 1);
+        play(pad.dataset.pad);
     });
 });
 
@@ -81,40 +81,40 @@ document.addEventListener('keydown', (e) => {
 
     switch(kc) {
         case "R":
-            play(0);
-            break;
-        case "T":
             play(1);
             break;
-        case "Y":
+        case "T":
             play(2);
             break;
-        case "U":
+        case "Y":
             play(3);
             break;
-        case "F":
+        case "U":
             play(4);
             break;
-        case "G":
+        case "F":
             play(5);
             break;
-        case "H":
+        case "G":
             play(6);
             break;
-        case "J":
+        case "H":
             play(7);
             break;
-        case "V":
+        case "J":
             play(8);
             break;
-        case "B":
+        case "V":
             play(9);
             break;
-        case "N":
+        case "B":
             play(10);
             break;
-        case "M":
+        case "N":
             play(11);
+            break;
+        case "M":
+            play(12);
             break;
     }
 });

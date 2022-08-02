@@ -58,6 +58,7 @@ const pads = [
 
 // Function
 const play = (pad_index) => {
+    console.log(pad_index);
     pads[pad_index].load();
     pads[pad_index].play();
 };
@@ -72,7 +73,10 @@ elm_pads.forEach(pad => {
 document.addEventListener('keydown', (e) => {
     const kc = String.fromCharCode(e.keyCode);
 
-    document.querySelector(`div[data-key='${kc}']`).classList.add("active");
+    const box = document.querySelector(`div[data-key='${kc}']`);
+    console.log(kc, `div[data-key='${kc}']`, box);
+    if (!box) return;
+    box.classList.add("active");
 
     switch(kc) {
         case "R":
@@ -115,5 +119,10 @@ document.addEventListener('keydown', (e) => {
 });
 
 document.addEventListener('keyup', (e) => {
-    document.querySelector("div[data-key='"+code+"']").classList.remove("active");
+    const kc = String.fromCharCode(e.keyCode);
+    const box = document.querySelector(`div[data-key='${kc}']`);
+    console.log(kc, `div[data-key='${kc}']`, box);
+
+    if (!box) return;
+    box.classList.remove("active");
 });

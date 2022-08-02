@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Oswald", sans-serif;
+    background: linear-gradient(to left, #fd746c, #ff9068);
+}
+h1 {
+    color: #fff;
+    font-size: 5vw;
+    letter-spacing: 6px;
+}
+.pad {
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.box {
+  width: 100px;
+  display: flex;
+  height: 100px;
+  margin: 10px 0;
+  font-size: 20px;
+  user-select: none;
+  align-items: center;
+  -ms-user-select: none;
+  background-color: #444;
+  -moz-user-select: none;
+  justify-content: center;
+  -webkit-user-select: none;
+  color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 6px -6px black;
+}
+.box:hover {
+    cursor: pointer;
+    background-color: #5e5e5e;
+}
+.box:active {
+    transition: all 0.2s;
+    transform: scale(1.1);
+    background-color: #2b2b2b;
+}
+.active {
+    transition: all 0.2s;
+    transform: scale(1.1);
+    background-color: #2b2b2b;
+}
+.pad-1, .pad-2, .pad-3, .pad-4 {
+    border: 2px solid #2ecc71;
+}
+.pad-5, .pad-6, .pad-7, .pad-8 {
+    border: 2px solid #E5446D;
+}
+.pad-9, .pad-10, .pad-11, .pad-12 {
+    border: 2px solid #1abc9c;
+}
